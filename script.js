@@ -47,7 +47,28 @@
 
       const lead = Object.fromEntries(new FormData(form).entries());
       document.dispatchEvent(new CustomEvent('talant:lead-submit', { detail: lead }));
-      status.textContent = 'Спасибо! Заявка принята. Мы свяжемся с вами для уточнения задачи.\nДемо-режим: данные не переданы, пока не подключён канал отправки.';
+      const message = [
+        'Здравствуйте! Хочу получить расчёт по проекту TALANT.',
+        `Имя: ${lead.name}`,
+        `Телефон / WhatsApp: ${lead.phone}`,
+        `Что требуется: ${lead.scope}`,
+        `Описание задачи: ${lead.message}`,
+        lead.request_intent ? `Тема обращения: ${lead.request_intent}` : ''
+      ].filter(Boolean).join('\n');
+      const whatsappUrl = `https://wa.me/77084402007?text=${encodeURIComponent(message)}`;
+      const whatsappWindow = window.open(whatsappUrl, '_blank');
+
+      if (whatsappWindow) {
+        whatsappWindow.opener = null;
+        status.textContent = 'WhatsApp открылся с заполненным сообщением. Проверьте его и нажмите «Отправить».';
+      } else {
+        const link = document.createElement('a');
+        link.href = whatsappUrl;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = 'Открыть подготовленное сообщение в WhatsApp';
+        status.replaceChildren(document.createTextNode('Браузер заблокировал новое окно. '), link);
+      }
     });
   }
 })();
