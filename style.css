@@ -68,3 +68,18 @@ main section[id],#top{scroll-margin-top:calc(var(--header-height) + 14px)}
 .services-cta-actions small{flex-basis:100%;margin-top:8px;color:rgba(255,255,255,.62);font-size:11px;line-height:1.7}
 @media(max-width:720px){:root{--header-height:68px}.hero{padding-top:55px}.services-cta{padding:54px 0}.services-cta-inner{grid-template-columns:1fr;gap:28px}.services-cta-actions{gap:10px}.services-cta-actions .button{flex:1 1 auto}.services-cta-actions small{font-size:10px}}
 @media(max-width:380px){.services-cta-actions{align-items:stretch;flex-direction:column}.services-cta-actions .button{width:100%;justify-content:space-between}}
+
+/* Business Kingdom YouTube channel */
+.youtube-section{color:#fff;background:#101d2a}
+.youtube-panel{display:grid;grid-template-columns:110px minmax(0,1fr);align-items:center;gap:42px;padding:clamp(28px,5vw,62px);border:1px solid rgba(255,255,255,.14);background:linear-gradient(115deg,rgba(255,255,255,.035),rgba(76,224,210,.055))}
+.youtube-mark{width:82px;height:58px;display:grid;place-items:center;border-radius:14px;background:#ed3434;color:#fff;font-size:25px}
+.youtube-mark span{padding-left:4px}
+.youtube-copy .eyebrow{margin-bottom:16px}
+.youtube-copy h2{color:#fff}
+.youtube-copy h2 em{color:var(--accent)}
+.youtube-copy>p:not(.eyebrow){max-width:520px;margin:17px 0 22px;color:rgba(255,255,255,.62);font-size:14px;line-height:1.7}
+.youtube-actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px}
+.youtube-button{background:#ed3434;color:#fff}
+.youtube-button:hover{background:#d32929}
+.youtube-handle{color:rgba(255,255,255,.48);font-size:11px;letter-spacing:.04em}
+@media(max-width:720px){.youtube-panel{grid-template-columns:1fr;gap:23px;padding:26px 20px}.youtube-mark{width:66px;height:48px;border-radius:11px;font-size:21px}.youtube-copy .eyebrow{font-size:9px}.youtube-copy>p:not(.eyebrow){font-size:12px}.youtube-actions{align-items:stretch;flex-direction:column;gap:12px}.youtube-actions .button{width:100%;justify-content:space-between}.youtube-handle{font-size:10px}}
