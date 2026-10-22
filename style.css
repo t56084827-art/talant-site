@@ -13,7 +13,7 @@
 @media(max-width:380px){.container{width:calc(100% - 30px)}.hero-actions{align-items:stretch;flex-direction:column}.hero-actions .button{justify-content:space-between}.service-grid{grid-template-columns:1fr}.service-card{min-height:190px}.project-type{flex-direction:column;gap:3px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}}
 
-/* TALANT 2.0 lead-generation updates */
+/* BusinessKingdom lead-generation updates */
 .header-cta{flex:0 0 auto;padding:9px 12px;border:1px solid var(--accent);color:var(--accent);font-size:10px;font-weight:700;transition:background .2s,color .2s}
 .header-cta:hover{background:var(--accent);color:var(--dark)}
 .hero h1.hero-title{max-width:610px;margin:0;font-size:clamp(38px,4.6vw,58px);font-weight:560;line-height:1.08;letter-spacing:-.055em}
@@ -83,3 +83,6 @@ main section[id],#top{scroll-margin-top:calc(var(--header-height) + 14px)}
 .youtube-button:hover{background:#d32929}
 .youtube-handle{color:rgba(255,255,255,.48);font-size:11px;letter-spacing:.04em}
 @media(max-width:720px){.youtube-panel{grid-template-columns:1fr;gap:23px;padding:26px 20px}.youtube-mark{width:66px;height:48px;border-radius:11px;font-size:21px}.youtube-copy .eyebrow{font-size:9px}.youtube-copy>p:not(.eyebrow){font-size:12px}.youtube-actions{align-items:stretch;flex-direction:column;gap:12px}.youtube-actions .button{width:100%;justify-content:space-between}.youtube-handle{font-size:10px}}
+.site-header .brand{gap:9px;font-size:clamp(14px,1.7vw,19px);letter-spacing:.09em}
+@media(max-width:900px){.site-header .header-inner{gap:12px}.site-header .primary-nav{gap:10px}.site-header .header-phone{display:none}}
+@media(max-width:720px){.site-header .brand{gap:8px;font-size:clamp(13px,4.5vw,17px);letter-spacing:.08em}}
