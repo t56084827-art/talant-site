@@ -48,7 +48,7 @@
       const lead = Object.fromEntries(new FormData(form).entries());
       document.dispatchEvent(new CustomEvent('talant:lead-submit', { detail: lead }));
       const message = [
-        'Здравствуйте! Хочу получить расчёт по проекту TALANT.',
+        'Здравствуйте! Хочу получить расчёт от BusinessKingdom.',
         `Имя: ${lead.name}`,
         `Телефон / WhatsApp: ${lead.phone}`,
         `Что требуется: ${lead.scope}`,
